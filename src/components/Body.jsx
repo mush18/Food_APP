@@ -1,7 +1,8 @@
 import { RestaurantCard } from "./RestaurantCard";
 // import resList from "../../utils/mockData";
 import {useState,useEffect} from "react"; 
-import { Shimmer } from "./shimmer";
+import { Shimmer } from "./Shimmer";
+
 
 
 // State Variable ==> Super Powrfull Variable (Which keeps the data Layer and UI Layer.)
@@ -48,6 +49,7 @@ const Body = () =>
         setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setAllRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
+
 
     return listOfRestaurants.length === 0 ? <Shimmer/> :( 
     <div className="body">
