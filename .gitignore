@@ -1,0 +1,10 @@
+# Ignore EP-1, EP-2, and EP-3 directories
+EP-1/
+EP-2/
+EP-3/
+
+# Ignore node_modules
+node_modules/
+.parcel-cache/
+/dist
+

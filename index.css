@@ -1,0 +1,278 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #ff6b6b; /* Bold and inviting color (warm red) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #ffbe76; /* A complementary accent color */
+    position: relative;
+    z-index: 10;
+}
+
+.logo-container
+{
+    display: flex;
+    width: 160px; /* Adjust logo size */
+    height: auto;
+    transition: transform 0.3s ease;
+    gap: 20px;
+}
+
+.logo
+{
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px; /* Make the logo round (like a plate or food icon) */
+    border: 3px solid #ffbe76; /* Add a border to the logo for focus */
+}
+
+.app-name
+{
+    align-content: center;
+    color: white;
+    font-size: 25px;
+}
+
+.app-name:hover
+{
+    color: black;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.header .logo:hover {
+    transform: scale(1.1); 
+    transition: 0.3s ease;
+}
+.login {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow */
+}
+
+.login:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slightly lift the button */
+}
+
+.login:active {
+    transform: translateY(0); /* Reset position when clicked */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Reduce shadow */
+}
+
+.nav-items
+{ 
+    color: black;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-items ul{
+    display: flex;
+    gap:20px ;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    padding: 10px 15px;
+    /* border-radius: 25px; */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    list-style: none;
+    align-items: center;
+}
+
+.header .nav-items ul li:hover {
+    color: black;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.search {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.search input {
+    width: 50%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search input:focus {
+    border-color: #ff6347;
+    box-shadow: 0px 4px 12px rgba(255, 99, 71, 0.2);
+}
+
+.res-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    margin: 40px;
+}
+
+.res-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.res-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.res-logo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.res-card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.res-card-body h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.res-card-body h4 {
+    font-size: 16px;
+    color: #ff6347; /* Highlight important info */
+    margin-bottom: 10px;
+}
+
+.res-card-body .rating {
+    background-color: #ffdd99;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+
+}
+
+.filter
+{
+    margin: 40px;
+}
+.filter-btn
+{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.filter-btn {
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 25px; 
+    font-size: 16px; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition:0.3s ease;
+    margin: 5px;
+}
+
+.filter-btn.top-rated {
+    background-color: #28a745; 
+    color: white; 
+}
+
+.filter-btn.top-rated:hover {
+    background-color: #218838; 
+    transform: scale(1.05); 
+}
+
+.filter-btn.show-all {
+    background-color: #007bff; 
+    color: white; 
+}
+
+.filter-btn.show-all:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+.shimmer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0; /* Optional: Background color */
+    overflow-y: auto; /* Allow scrolling if necessary */
+}
+
+/* Individual shimmer card */
+.shimmer-card {
+    background-color: rgb(141, 18, 18); /* Background for the card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Inner padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Shimmer effect for images */
+.shimmer-img {
+    width: 100%; /* Full width of the card */
+    height: 150px; /* Fixed height for image */
+    background-color: #58d691; /* Light gray color */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between elements */
+    animation: shimmer 1.5s infinite linear; /* Add shimmer animation */
+}
+
+/* Shimmer lines */
+.shimmer-line {
+    width: 100%; /* Full width */
+    height: 20px; /* Height of the line */
+    background-color: #a70125; /* Light gray color */
+    margin: 10px 0; /* Space between lines */
+    border-radius: 5px; /* Rounded corners */
+    animation: shimmer 1.5s infinite linear; /* Add shimmer animation */
+}
+
+/* Shorter subtitle */
+.shimmer-subtitle.short {
+    width: 60%; /* Shorter width */
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-color: #e0e0e0;
+    }
+    50% {
+        background-color: #f6f6f6; /* Slightly lighter */
+    }
+    100% {
+        background-color: #e0e0e0;
+    }
+}
